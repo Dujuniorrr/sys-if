@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+
+{% block title %}Login{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <h3 class="text-dark">Login.</h3>
+        <p class="">Bem Vindo!</p>
+        <p class="" style="margin-top: -5%;">Entre com seu usuário ou mátricula</p>
+        <form action="" method="POST">
+            <div class="text-dark">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+            </div>
+            <button type="submit" class="btn btn " style="background-color: #a4cba5; margin-top: 5%;
+                margin-left: 30%; width: 40%; border: 1px solid black;  ">Login</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
